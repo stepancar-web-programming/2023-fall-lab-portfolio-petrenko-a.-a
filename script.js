@@ -67,7 +67,6 @@ const sliderModule = (function () {
     return {
       nextSlide,
       prevSlide,
-      stopAutoSlide,
       workAutoSlide,
     };
 })();
