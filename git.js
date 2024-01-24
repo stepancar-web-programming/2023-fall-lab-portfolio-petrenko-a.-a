@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const githubUsername = 'Deadshotop';
-    const githubToken = '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';
     const githubProjectsList = document.getElementById('github-projects');
 
     function getGitHubProjects() {
         const apiUrl = `https://api.github.com/users/${githubUsername}/repos`;
 
-        const headers = { Authorization: `Bearer ${githubToken}` }
-
-        fetch(apiUrl, { headers })
+        fetch(apiUrl)
             .then(response => response.json())
             .then(projects => {
                 githubProjectsList.innerHTML = '';
